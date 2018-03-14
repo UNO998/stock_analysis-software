@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="600.0" prefWidth="166.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="profitsrus.ProfitsRUs">
+   <children>
+      <TitledPane animated="false" layoutX="13.0" layoutY="127.0" text="Time">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="162.0" prefWidth="140.0">
+               <children>
+                  <TextField fx:id="fromday" layoutX="3.0" layoutY="40.0" prefHeight="27.0" prefWidth="35.0" promptText="1" text="1" />
+                  <TextField fx:id="frommonth" layoutX="45.0" layoutY="40.0" prefHeight="27.0" prefWidth="37.0" promptText="1" text="1" />
+                  <TextField fx:id="fromyear" layoutX="86.0" layoutY="40.0" prefHeight="27.0" prefWidth="49.0" promptText="2000" text="2000" />
+                  <TextField fx:id="today" layoutX="3.0" layoutY="105.0" prefHeight="27.0" prefWidth="35.0" promptText="1" text="1" />
+                  <TextField fx:id="tomonth" layoutX="44.0" layoutY="105.0" prefHeight="27.0" prefWidth="39.0" promptText="1" text="1" />
+                  <TextField fx:id="toyear" layoutX="86.0" layoutY="105.0" prefHeight="27.0" prefWidth="49.0" promptText="2005" text="2005" />
+                  <Text layoutX="16.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="From:(d,m,y)" />
+                  <Text layoutX="16.0" layoutY="91.0" strokeType="OUTSIDE" strokeWidth="0.0" text="To:(d,m,y)" />
+               </children></AnchorPane>
+        </content>
+      </TitledPane>
+      <TitledPane animated="false" layoutX="15.0" layoutY="327.0" text="Moving Average">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="140.0">
+               <children>
+                  <CheckBox fx:id="moving20" layoutX="41.0" layoutY="32.0" mnemonicParsing="false" text="20" />
+                  <CheckBox fx:id="moving50" layoutX="41.0" layoutY="70.0" mnemonicParsing="false" text="50" />
+                  <CheckBox fx:id="moving100" layoutX="41.0" layoutY="106.0" mnemonicParsing="false" text="100" />
+                  <CheckBox fx:id="moving200" layoutX="41.0" layoutY="136.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="119.0" text="200" />
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+      <TitledPane animated="false" layoutX="13.0" layoutY="14.0" prefHeight="103.0" prefWidth="142.0" text="Stock">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="62.0" prefWidth="140.0">
+               <children>
+                  <ChoiceBox fx:id="stock" layoutX="17.0" layoutY="24.0" onMousePressed="#handleStockList" prefHeight="27.0" prefWidth="103.0" />
+               </children></AnchorPane>
+         </content>
+      </TitledPane>
+      <Button fx:id="enter" layoutX="54.0" layoutY="552.0" mnemonicParsing="false" onAction="#handleButtonAction" text="Enter" />
+   </children>
+</AnchorPane>
